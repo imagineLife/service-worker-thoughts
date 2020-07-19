@@ -43,9 +43,6 @@
 
 		//LISTEN for 'message' event
 		worker.addEventListener("message",onMessage);
-
-		//SEND a msg
-		worker.postMessage({ start: true });
 	}
 
 	function stopFibs() {
@@ -58,11 +55,8 @@
 	}
 
 	function onMessage(e) {
-		console.log('e')
-		console.log(e)
-		console.log(e.data);
-		// const {data: {num, fib}} = evt;
-		// renderFib(num,fib);
+		console.log(`CLIENT: onMessage`);
+		worker.postMessage(`Hello from client!`)
 	}
 
 })();
