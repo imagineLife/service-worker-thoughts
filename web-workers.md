@@ -18,3 +18,10 @@ do some 'heavy lifting' that the main thread doesn't 'need' to do
 		- **dedicated-workers**, belonging to a webpage tab
 		- **shared-workers**, running 1x, allowed to communicate with all open pages, may not work in all browser settings
 		- 
+
+SERVICE WORKERS...
+- lives beyond the web tab
+- may still be limited to the page it started on
+- the browser could shut it down
+- browser manages service-worker life
+
