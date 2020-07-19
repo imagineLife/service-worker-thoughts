@@ -52,6 +52,9 @@
 
 		//LISTEN for 'message' event
 		worker.addEventListener("message",onMessage);
+
+		//START the fib-creating process
+		worker.postMessage("Fib Starting!!")
 	}
 
 	function stopFibs() {
@@ -59,6 +62,8 @@
 		startStopBtn.addEventListener("click",startFibs,false);
 
 		startStopBtn.innerText = "Start";
+
+		//kill worker process
 		worker.terminate();
 		worker = null;
 	}
@@ -66,6 +71,7 @@
 	function onMessage(e) {
 		console.log(`CLIENT: onMessage`);
 		worker.postMessage(`Hello from client!`)
+		renderFib(e.data.idx, e.data.num)
 	}
 
 })();
