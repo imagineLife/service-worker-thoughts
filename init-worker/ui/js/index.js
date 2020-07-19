@@ -1,3 +1,12 @@
+/*
+	NOTES:
+	- data to/from web-workers IS COPIED, not 'referenced'
+	https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
+
+	CAN'T send a fn
+	CAN take a string representing a fn, && eval the fn...etc
+*/ 
+
 (function index(){
 	"use strict";
 
