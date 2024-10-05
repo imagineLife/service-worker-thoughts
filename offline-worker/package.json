@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cookie": "~0.3.1",
+    "cookie": "~0.7.0",
     "get-stream": "~5.1.0",
     "node-static-alias": "~1.1.2",
     "random-number-csprng": "~1.0.2"
